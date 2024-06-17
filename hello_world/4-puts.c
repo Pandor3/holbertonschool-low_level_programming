@@ -1,5 +1,5 @@
 #include <stdio.h>
-/* The main function is vital for a C code, we can call other functions with it.*/
+/* The main function is the entry point.*/
 
 int main(void)
 {
