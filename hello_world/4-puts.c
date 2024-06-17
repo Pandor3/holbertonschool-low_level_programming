@@ -1,5 +1,7 @@
 #include <stdio.h>
-/* The main function is the entry point.*/
+/* 
+ * The main function is the entry point.
+ */
 
 int main(void)
 {
