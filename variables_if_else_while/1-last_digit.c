@@ -1,12 +1,9 @@
 #include <stdlib.h>
 #include <time.h>
 #include <stdio.h>
-
 /**
- * main is the entry point
+ * main - is the entry point
  * Return: Always 0
- * % is the modulus operator
- * %d is the value of 'n'
  */
 
 int main(void)
