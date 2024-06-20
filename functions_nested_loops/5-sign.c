@@ -6,22 +6,20 @@
  */
 
 int print_sign(int n)
-	{
-	if (n > 48)
 {
+	if (n > 0)
+{
+	_putchar('+');
 	return (1);
-	print_sign(43);
 }
-	if (n == 48)
+	else if (n == 0)
 {
+	_putchar('0');
 	return (0);
-	print_sign(48);
 }
-	if (n < 48)
+	else
 {
+	_putchar('-');
 	return (-1);
-	print_sign(45);
 }
-	_putchar('\n');
-	return (0);
-	}
+}
