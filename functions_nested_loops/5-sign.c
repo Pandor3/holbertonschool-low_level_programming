@@ -10,17 +10,17 @@ int print_sign(int n)
 	if (n > 48)
 {
 	return (1);
-	_putchar(43);
+	print_sign(43);
 }
 	if (n == 48)
 {
 	return (0);
-	_putchar(48);
+	print_sign(48);
 }
 	if (n < 48)
 {
 	return (-1);
-	_putchar(45);
+	print_sign(45);
 }
 	_putchar('\n');
 	return (0);
