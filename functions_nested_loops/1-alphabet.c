@@ -1,8 +1,7 @@
 #include "main.h"
 
 /**
- * main - is the entry point
- * void print_alphabet(void) - print alphabet
+ * print_alphabet - uses the for function to print the alphabet
  * Return: Always 0
  */
 
