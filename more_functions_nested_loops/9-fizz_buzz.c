@@ -16,19 +16,21 @@ int main(void)
 {
 	if (n == 100)
 
-	printf("%s ", B);
+	printf("%s", B);
 	else if ((n % 3 == 0) && (n % 5 == 0))
-	printf("%s ", FB);
+	printf("%s", FB);
 	else if (n % 3 == 0)
-	printf("%s ", F);
+	printf("%s", F);
 	else if (n % 5 == 0)
-	printf("%s ", B);
+	printf("%s", B);
 	else
 
-	printf("%d ", n);
+	printf("%d", n);
+
+	if (n != 100)
+	printf(" ");
+
 }
-{
 	printf("\n");
 	return (0);
-}
 }
