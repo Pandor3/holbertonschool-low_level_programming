@@ -20,9 +20,5 @@ void print_line(int n)
 	{
 		_putchar('\n');
 	}
-	if (n == -10)
-	{
-		_putchar('\n');
-	}
 	_putchar('\n');
 }
