@@ -14,12 +14,12 @@ while (str[l] != '\0')
 {
 	l++;
 }
-	n = (l - 1) / 2;
+	n = l / 2;
 
 while (n < l)
 {
-	n++;
 	_putchar(str[n]);
+	n++;
 }
 	_putchar('\n');
 }
