@@ -14,7 +14,7 @@ while (str[l] != '\0')
 {
 	l++;
 }
-	n = l / 2;
+	n = (l + 1) / 2;
 
 while (n < l)
 {
