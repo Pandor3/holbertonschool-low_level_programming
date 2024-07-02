@@ -17,6 +17,7 @@ char *_strstr(char *haystack, char *needle)
 
 	if (l < *needle)
 {
+	l++;
 	return (needle);
 }
 }
