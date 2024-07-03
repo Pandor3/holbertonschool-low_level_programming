@@ -1,4 +1,4 @@
-#include "main.h"
+#include "Main.h"
 /**
  * _puts_recursion - Function which prints a string in recursive
  * @s: pointer of the character string
