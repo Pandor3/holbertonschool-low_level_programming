@@ -1,21 +1,14 @@
 #include <stdio.h>
+/**
+ * main - prints the number of arguments passed to it
+ * main - holds the code for Args
+ * @argc: counts arguments
+ * @argv: counts strings of characters
+ * Return: Always 0
+ */
 
-
-int main(int argc, char *argv[])
+int main(int argc, __attribute__((unused)) char *argv[])
 {
-	int count;
-	printf("\%s\n", argv[0]);
-
-	if (arg > 1)
-	{
-		for (count = 1; count < argc; count++)
-	{
-		printf("argc[%d] = %s\n", count, argc[count]);
-	}
-	}
-	else
-	{
-		return (0);
-	}
-		return (0):
+	printf("%d\n", argc);
+	return (0);
 }
