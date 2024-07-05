@@ -2,6 +2,7 @@
 #include <stdlib.h>
 /**
  * main - Function which adds positive numbers
+ * @argc: counts characters
  * @argv: counts strings
  * Return: 1 or 0
  */
