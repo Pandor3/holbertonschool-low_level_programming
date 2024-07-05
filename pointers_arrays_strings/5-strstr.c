@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 /**
  * _strstr - a function which locates a substring
  * @haystack: pointer to hello, world
@@ -8,18 +9,25 @@
 
 char *_strstr(char *haystack, char *needle)
 {
-	int i = 0;
-	int l = 0;
-
-	while (i < *haystack)
+	if (!*needle)
 {
-	i++;
+	return (haystack);
+}
 
-	while (l < *needle)
+	for (; *haystack; haystack++)
 {
-	l++;
-	if (haystack == needle)
-	return (needle);
+	char *a = haystack;
+	char *b = needle;
+
+	while (*a && *b && (*a == *b))
+{
+	a++;
+	b++;
+}
+
+	if (!*b)
+{
+	return (haystack);
 }
 }
 	return ('\0');
