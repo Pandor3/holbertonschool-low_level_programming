@@ -11,18 +11,21 @@
 
 char *str_concat(char *s1, char *s2)
 {
+	char *ptr;
 	char *i = s1;
+
+	ptr = malloc(sizeof(i) + 1);
 
 	for (; *i != '\0'; i++)
 	{
 	}
-
-	while (*s2 != '0')
+	while (*s2 != '\0')
 	{
 		*i = *s2;
 		i++;
 		s2++;
 	}
+		s1 = s2;
 		*i = '\0';
-		return (i);
+		return (ptr);
 }
