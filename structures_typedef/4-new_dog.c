@@ -13,6 +13,8 @@
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *d;
+	char *n;
+	char *o;
 
 	if (name == NULL || owner == NULL)
 		return (NULL);
@@ -20,6 +22,9 @@ dog_t *new_dog(char *name, float age, char *owner)
 	if (d == NULL)
 		return (NULL);
 	d->name = name;
+	n = _strdup(name);
+	if (n == NULL)
+		return (NULL);
 	if (name == NULL)
 		free(d);
 	d->age = age;
@@ -30,10 +35,46 @@ dog_t *new_dog(char *name, float age, char *owner)
 		return (NULL);
 	}
 	d->owner = owner;
+	o = _strdup(owner);
+	if (o == NULL)
+		return (NULL);
 	if (owner == NULL)
 	{
 		free(name);
 		free(d);
 	}
 	return (d);
+}
+
+/**
+ * _strdup - returns a pointer which copies a string
+ * @str: pointer to the string
+ * Return: NULL or ptr
+ */
+
+char *_strdup(char *str)
+{
+	int n;
+	int i = 0;
+	char *ptr;
+
+	if (str == NULL)
+	{
+		return (NULL);
+	}
+	for (n =  0; str[n] != '\0'; n++)
+	{
+	}
+
+	ptr = malloc(sizeof(char) * n + 1);
+	if (ptr == 0)
+	{
+		return (NULL);
+	}
+	while (str[i] != '\0')
+	{
+		ptr[i] = str[i];
+		i++;
+	}
+	return (ptr);
 }
