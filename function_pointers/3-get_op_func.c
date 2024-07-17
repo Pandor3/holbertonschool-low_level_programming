@@ -1,4 +1,5 @@
-#include "function_pointers.h"
+#include "3-calc.h"
+#include <stdlib.h>
 
 /**
  * get_op_func - function selects a function and execute it
@@ -20,10 +21,10 @@ int (*get_op_func(char *s))(int, int)
 
 	i = 0;
 
-	while (*op_t->ops[i] != NULL)
+	while (ops[i].op != NULL)
 	{
-		if (*op_t->ops[i] == *s)
-			return (*op_t->f[i]);
+		if (*(ops[i].op) == *s && s[1] == '\0')
+			return (ops[i].f);
 		i++;
 	}
 		return (NULL);

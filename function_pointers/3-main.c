@@ -5,20 +5,32 @@
  * Return: an int
  */
 
-int main(void)
+int main(int argc, char *argv[])
 {
-	if (argc < 4)
+	int num1;
+	int num2;
+	int result;
+	int (*f)(int, int);
+
+	if (argc > 4 || argc < 4)
 	{
 		printf("Error\n");
 		exit(98);
 	}
-	if (argv[2] != op_t->op)
+	num1 = atoi(argv[1]);
+	num2 = atoi(argv[3]);
+	f = get_op_func(argv[2]);
+	if (f == NULL)
 	{
 		printf("Error\n");
 		exit(99);
 	}
-	if (argv[1] == 0 || argv[3] == 0)
+	if ((argv[2][0] == '/' || argv[2][0] == '%') && (num1 == 0 || num2 == 0))
 	{
 		printf("Error\n");
 		exit(100);
 	}
+	result = f(num1, num2);
+	printf("%d\n", result);
+	return (0);
+}
