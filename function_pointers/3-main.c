@@ -2,6 +2,8 @@
 
 /**
  * main - main function
+ * @argc: Argument counter
+ * @argv: Argument vector
  * Return: an int
  */
 
