@@ -1,7 +1,7 @@
 #include "variadic_functions.h"
 
 /**
- * letter - function which prints a char
+ * op_letter - function which prints a char
  */
 void op_letter(void)
 {
@@ -9,7 +9,7 @@ void op_letter(void)
 }
 
 /**
- * number - function which prints an int
+ * op_number - function which prints an int
  */
 void op_number(void)
 {
@@ -17,7 +17,7 @@ void op_number(void)
 }
 
 /**
- * virgule - function which prints a float
+ * op_virgule - function which prints a float
  */
 void op_virgule(void)
 {
@@ -25,29 +25,32 @@ void op_virgule(void)
 }
 
 /**
- * str - function which prints a string of characters
+ * op_str - function which prints a string of characters
  */
 void  op_str(void)
 {
 	printf("%s");
 }
 
+/**
+ * print_all - function which prints everything
+ * @format: list of types
+ */
 void print_all(const char * const format, ...)
 {
-	char c;
-	int i;
-	float f;
-	char * s;
-	char * p = 0;
+	int i = 0;
 
 	forme list {
-	{"c", op_letter},
-	{"i", op_number},
-	{"f", op_virgule},
-	{"s", op_str},
+	{"c", op_letter};
+	{"i", op_number};
+	{"f", op_virgule};
+	{"s", op_str};
 	{NULL, NULL}
 	};
-	
-	while (format[p] != NULL)
-	{
 
+	while (i < format[NULL])
+	{
+		printf("%d\n", format[i]) ;
+		i++;
+	}
+}
