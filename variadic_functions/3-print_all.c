@@ -7,13 +7,22 @@
 
 void print_all(const char * const format, ...)
 {
-	
+	forme *tab;
+	int i = 0;
+
+
+	while (forme[i].op != NULL)
+	{
+		if (*(tab[i].op) == format && format[1] == '\0')
+			return (forme[i].f);
+	}
+}
 	
 
 /**
  * letter - function which prints a char
  */
-char letter(void)
+char op_letter(void)
 {
 	printf("%c");
 }
@@ -21,7 +30,7 @@ char letter(void)
 /**
  * number - function which prints an int
  */
-int number(void)
+int op_number(void)
 {
 	printf("%d");
 }
@@ -29,7 +38,7 @@ int number(void)
 /**
  * virgule - function which prints a float
  */
-float virgule(void)
+float op_virgule(void)
 {
 	printf("%f");
 }
@@ -37,7 +46,7 @@ float virgule(void)
 /**
  * str - function which prints a string of characters
  */
-char * str(void)
+char * op_str(void)
 {
 	printf("%s");
 }
