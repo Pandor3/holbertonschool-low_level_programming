@@ -5,6 +5,12 @@
 #include <stdlib.h>
 #include <stdarg.h>
 
+typedef struct forme {
+	{"c", f1},
+	{"i", f2},
+	{"f", f3},
+	{"s", f4},
+}forme;
 int _putchar(char c);
 int sum_them_all(const unsigned int n, ...);
 void print_numbers(const char *separator, const unsigned int n, ...);
