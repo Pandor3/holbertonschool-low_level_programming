@@ -5,21 +5,18 @@
 #include <stdlib.h>
 #include <stdarg.h>
 
-typedef struct forme[] {
-	{"c", op_letter},
-	{"i", op_number},
-	{"f", op_virgule},
-	{"s", op_str},
-	{NULL, NULL}
-}forme;
+typedef struct spec {
+	char * check;
+	void (*f)(void);
+	}forme;
 int _putchar(char c);
 int sum_them_all(const unsigned int n, ...);
 void print_numbers(const char *separator, const unsigned int n, ...);
 void print_strings(const char *separator, const unsigned int n, ...);
 void print_all(const char * const format, ...);
-char op_letter(void);
-int op_number(void);
-float op_virgule(void);
-char * op_str(void);
+void op_letter(void);
+void op_number(void);
+void op_virgule(void);
+void op_str(void);
 
 #endif

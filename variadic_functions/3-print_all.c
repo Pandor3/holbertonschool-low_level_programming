@@ -1,28 +1,9 @@
 #include "variadic_functions.h"
 
 /**
- * print_all - function which prints anything
- * @format: a list of types of arguments
- */
-
-void print_all(const char * const format, ...)
-{
-	forme *tab;
-	int i = 0;
-
-
-	while (forme[i].op != NULL)
-	{
-		if (*(tab[i].op) == format && format[1] == '\0')
-			return (forme[i].f);
-	}
-}
-	
-
-/**
  * letter - function which prints a char
  */
-char op_letter(void)
+void op_letter(void)
 {
 	printf("%c");
 }
@@ -30,7 +11,7 @@ char op_letter(void)
 /**
  * number - function which prints an int
  */
-int op_number(void)
+void op_number(void)
 {
 	printf("%d");
 }
@@ -38,7 +19,7 @@ int op_number(void)
 /**
  * virgule - function which prints a float
  */
-float op_virgule(void)
+void op_virgule(void)
 {
 	printf("%f");
 }
@@ -46,7 +27,27 @@ float op_virgule(void)
 /**
  * str - function which prints a string of characters
  */
-char * op_str(void)
+void  op_str(void)
 {
 	printf("%s");
 }
+
+void print_all(const char * const format, ...)
+{
+	char c;
+	int i;
+	float f;
+	char * s;
+	char * p = 0;
+
+	forme list {
+	{"c", op_letter},
+	{"i", op_number},
+	{"f", op_virgule},
+	{"s", op_str},
+	{NULL, NULL}
+	};
+	
+	while (format[p] != NULL)
+	{
+
