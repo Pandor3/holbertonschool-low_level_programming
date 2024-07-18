@@ -1,51 +1,43 @@
 #include "variadic_functions.h"
 
-
+/**
+ * print_all - function which prints anything
+ * @format: a list of types of arguments
+ */
 
 void print_all(const char * const format, ...)
 {
+	
+	
 
-
-
-
+/**
+ * letter - function which prints a char
+ */
 char letter(void)
 {
-	char a = 65;
-	
-	if (a >= 126 || a < 65)
-		return (NULL);
-	while (a < 126)
-	{
-		printf("%c\n", a)
-	}
-	return (0);
+	printf("%c");
 }
 
+/**
+ * number - function which prints an int
+ */
 int number(void)
 {
-	int n = 48;
-
-	if (n > 57 || n < 48)
-		return (NULL);
-	while (n <= 57)
-	{
-		printf("%d\n", n)
-	}
-	return (0);
+	printf("%d");
 }
 
+/**
+ * virgule - function which prints a float
+ */
 float virgule(void)
 {
-
+	printf("%f");
 }
 
-void string(void)
+/**
+ * str - function which prints a string of characters
+ */
+char * str(void)
 {
-	int i = 0;
-	
-	while (i < '\0')
-	{
-		i++;
-	}
-	printf("%s\d", i);
+	printf("%s");
 }
