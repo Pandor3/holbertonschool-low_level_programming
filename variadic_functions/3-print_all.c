@@ -1,34 +1,46 @@
 #include "variadic_functions.h"
 
 /**
- * op_letter - function which prints a char
+ * letter - function which prints a char
+ * @arg: arguments
  */
-void letter(void)
+void letter(va_list arg)
 {
+	char c = va_arg(arg, char);
+
 	printf("%c");
 }
 
 /**
- * op_number - function which prints an int
+ * number - function which prints an int
+ * @arg: arguments
  */
-void number(void)
+void number(va_list arg)
 {
+	int i = va_arg(arg, int);
+
 	printf("%d");
 }
 
 /**
- * op_virgule - function which prints a float
+ * virgule - function which prints a float
+ * @arg: arguments
  */
-void virgule(void)
+void virgule(va_list arg)
 {
+	float f = va_arg(arg, double);
+
 	printf("%f");
 }
 
 /**
- * op_str - function which prints a string of characters
+ * str - function which prints a string of characters
+ * @arg: arguments
  */
-void  str(void)
+void str(va_list arg)
 {
+	char *s = va_arg(arg, char);
+
 	printf("%s");
 }
 
@@ -38,19 +50,34 @@ void  str(void)
  */
 void print_all(const char * const format, ...)
 {
-	int i = 0;
+	int a = 0;
+	int z = 0;
+	va_list list;
 
-	forme list {
-	{"c", letter};
-	{"i", number};
-	{"f", virgule};
-	{"s", str};
-	{NULL, NULL}
+	forme tab[]
+	{
+		{"c", letter},
+		{"i", number},
+		{"f", virgule},
+		{"s", str},
+		{NULL, NULL}
 	};
 
-	while (i < format[NULL])
+	va_start(arg, format);
+	while (format != NULL && format[a] != NULL)
 	{
-		printf("%d\n", format[i]) ;
-		i++;
+		while (tab[z].check == format[a])
+		{
+			if (*(tab[z].check) == format[a])
+			{
+				printf("%s");
+				tab[z].f(arg);
+			}
+			a++;
+		}
+		z++;
+		a = 0;
 	}
+	printf("\n");
+	va_end(arg);
 }
