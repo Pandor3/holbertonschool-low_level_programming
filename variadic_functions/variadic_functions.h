@@ -14,9 +14,9 @@ int sum_them_all(const unsigned int n, ...);
 void print_numbers(const char *separator, const unsigned int n, ...);
 void print_strings(const char *separator, const unsigned int n, ...);
 void print_all(const char * const format, ...);
-void op_letter(void);
-void op_number(void);
-void op_virgule(void);
-void op_str(void);
+void letter(void);
+void number(void);
+void virgule(void);
+void str(void);
 
 #endif

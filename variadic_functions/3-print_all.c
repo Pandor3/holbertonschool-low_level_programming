@@ -3,7 +3,7 @@
 /**
  * op_letter - function which prints a char
  */
-void op_letter(void)
+void letter(void)
 {
 	printf("%c");
 }
@@ -11,7 +11,7 @@ void op_letter(void)
 /**
  * op_number - function which prints an int
  */
-void op_number(void)
+void number(void)
 {
 	printf("%d");
 }
@@ -19,7 +19,7 @@ void op_number(void)
 /**
  * op_virgule - function which prints a float
  */
-void op_virgule(void)
+void virgule(void)
 {
 	printf("%f");
 }
@@ -27,7 +27,7 @@ void op_virgule(void)
 /**
  * op_str - function which prints a string of characters
  */
-void  op_str(void)
+void  str(void)
 {
 	printf("%s");
 }
@@ -41,10 +41,10 @@ void print_all(const char * const format, ...)
 	int i = 0;
 
 	forme list {
-	{"c", op_letter};
-	{"i", op_number};
-	{"f", op_virgule};
-	{"s", op_str};
+	{"c", letter};
+	{"i", number};
+	{"f", virgule};
+	{"s", str};
 	{NULL, NULL}
 	};
 
