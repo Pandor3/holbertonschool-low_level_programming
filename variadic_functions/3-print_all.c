@@ -62,7 +62,7 @@ void print_all(const char * const format, ...)
 		{NULL, NULL}
 	};
 
-	va_start(arg, format);
+	va_start(list, format);
 	while (format != NULL && format[a] != '\0')
 	{
 		while (tab[a].check != NULL)
@@ -70,7 +70,7 @@ void print_all(const char * const format, ...)
 			if (*(tab[a].check) == format[z])
 			{
 				printf("%s", format);
-				tab[a].f(arg);
+				tab[a].f(list);
 			}
 			a++;
 		}
@@ -78,5 +78,5 @@ void print_all(const char * const format, ...)
 		a = 0;
 	}
 	printf("\n");
-	va_end(arg);
+	va_end(list);
 }
