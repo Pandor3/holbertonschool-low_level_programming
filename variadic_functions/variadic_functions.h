@@ -6,13 +6,13 @@
 #include <stdarg.h>
 
 /**
- * struct formule - structure made for the print_all exercise
+ * struct tableau - structure made for the print_all exercise
  * @f: pointer for the function used in the print_all exercise
  */
 
-typedef struct formule
+typedef struct tableau
 {
-	char *check
+	char *check;
 	void (*f)(va_list arg);
 } forme;
 int _putchar(char c);

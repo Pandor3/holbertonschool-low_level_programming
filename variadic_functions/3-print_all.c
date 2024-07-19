@@ -6,9 +6,9 @@
  */
 void letter(va_list arg)
 {
-	char c = va_arg(arg, char);
+	char c = va_arg(arg, int);
 
-	printf("%c");
+	printf("%c", c);
 }
 
 /**
@@ -19,7 +19,7 @@ void number(va_list arg)
 {
 	int i = va_arg(arg, int);
 
-	printf("%d");
+	printf("%d", i);
 }
 
 /**
@@ -30,7 +30,7 @@ void virgule(va_list arg)
 {
 	float f = va_arg(arg, double);
 
-	printf("%f");
+	printf("%f", f);
 }
 
 /**
@@ -39,9 +39,9 @@ void virgule(va_list arg)
  */
 void str(va_list arg)
 {
-	char *s = va_arg(arg, char);
+	char *s = va_arg(arg, char*);
 
-	printf("%s");
+	printf("%s", s);
 }
 
 /**
@@ -54,8 +54,7 @@ void print_all(const char * const format, ...)
 	int z = 0;
 	va_list list;
 
-	forme tab[]
-	{
+	forme tab[] = {
 		{"c", letter},
 		{"i", number},
 		{"f", virgule},
@@ -64,14 +63,14 @@ void print_all(const char * const format, ...)
 	};
 
 	va_start(arg, format);
-	while (format != NULL && format[a] != NULL)
+	while (format != NULL && format[a] != '\0')
 	{
-		while (tab[z].check == format[a])
+		while (tab[a].check != NULL)
 		{
-			if (*(tab[z].check) == format[a])
+			if (*(tab[a].check) == format[z])
 			{
-				printf("%s");
-				tab[z].f(arg);
+				printf("%s", format);
+				tab[a].f(arg);
 			}
 			a++;
 		}
